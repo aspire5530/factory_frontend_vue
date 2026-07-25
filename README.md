@@ -1,48 +1,77 @@
-# project-site
+# Factory Monitor Platform
 
-This template should help get you started developing with Vue 3 in Vite.
 
-## Recommended IDE Setup
+工廠生產監控與報表管理系統。
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+以工廠生產資料為情境，打造一套前後端分離的平台，
+提供設備狀態監控、生產統計、歷史報表與資料視覺化功能。
 
-## Recommended Browser Setup
+## Demo
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+- Frontend: [Factory Monitor Demo](...)
+- Backend API: [Factory Monitor API](...)
 
-## Type Support for `.vue` Imports in TS
+## Features
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+### Production Monitor
+- 設備運行狀態監控
+- 生產數量統計
+- 良率與不良率分析
+- ECharts 資料視覺化
 
-## Customize configuration
+### Production Data
+- 生產紀錄查詢
+- 日期區間篩選
+- 機台條件篩選
+- 表格資料展示
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## Screenshots
 
-## Project Setup
+![Monitor](./screenshots/monitor_01.png)
 
-```sh
+![Statistics](./screenshots/monitor_02.png)
+
+![Production Report](./screenshots/data_01.png)
+
+## Tech Stack
+
+- Vue 3
+- TypeScript
+- Vite
+- Pinia
+- Element Plus
+- ECharts
+- Axios
+
+
+## Architecture
+
+- Frontend / Backend separation
+- RESTful API integration
+- State management with Pinia
+- Component-based architecture
+- Responsive dashboard layout
+
+## Development
+
+Install dependencies
+
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+Run development server
 
-```sh
+```bash
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+Build for production
 
-```sh
+```bash
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+## Deployment
 
-```sh
-npm run lint
-```
+- Hosted on Render
