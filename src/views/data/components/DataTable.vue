@@ -25,7 +25,7 @@ const formatDate = (date: string) => {
                 <el-table-column prop="good" label="Good" sortable />
                 <el-table-column prop="defect" label="Defect" sortable />
             </el-table-column>
-            <el-table-column prop="createdAt" label="CreatedAt" sortable>
+            <el-table-column prop="createdAt" label="Time" sortable>
                 <template #default="{ row }">
                     {{  formatDate(row.createdAt) }}
                 </template>
@@ -38,7 +38,6 @@ const formatDate = (date: string) => {
 .production-table .el-table {
     border-radius: 20px;
 }
-
 
 .production-table .el-table thead.is-group th.el-table__cell {
     border-color: transparent;

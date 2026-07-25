@@ -65,7 +65,7 @@ onMounted(() => {
             </el-select>
         </el-form-item>
         <el-form-item>
-            <el-button class="search-button" @click="handleSearch">
+            <el-button class="search-button" @click="handleSearch" type="success">
                 Search
             </el-button>
         </el-form-item>
@@ -91,14 +91,18 @@ onMounted(() => {
 <style scoped>
 :deep(.el-date-editor) {
     border-radius: 999px;
-    background: #e7e7e7;
+    background: #fbf9e5;
+}
+
+:deep(.el-date-editor:hover) {
+    background-color: #ffffff;
+    border: 1px dotted #957070;
 }
 
 :deep(.monitor-select .el-select__wrapper) {
     min-width: 140px;
     border-radius: 999px;
-    background: #e7e7e7;
-
+    background: #e9efff;
 }
 
 .search-button {
