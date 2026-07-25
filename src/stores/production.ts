@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { fetchTodayTrend as fetchTodayTrendApi, fetchProduction as fetchProductionApi, 
-    type TodayTrendItem, type ProductionItem, type ProductionResponse, type ProductionQuery } from '@/api/production'
+    type TodayTrendItem, type ProductionResponse, type ProductionQuery } from '@/api/production'
 
 interface ProductionState {
     trend: TodayTrendItem[],
