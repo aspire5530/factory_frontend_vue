@@ -8,8 +8,7 @@
 
 ## Demo
 
-- Frontend: [Factory Monitor Demo](...)
-- Backend API: [Factory Monitor API](...)
+- Frontend: [Factory Monitor Demo](https://factory-frontend-vue.onrender.com/monitor)
 
 ## Features
 
@@ -27,11 +26,11 @@
 
 ## Screenshots
 
-![Monitor](./screenshots/monitor_01.png)
+![Monitor](./.screenshots/monitor_01.png)
 
-![Statistics](./screenshots/monitor_02.png)
+![Statistics](./.screenshots/monitor_02.png)
 
-![Production Report](./screenshots/data_01.png)
+![Production Report](./.screenshots/data_01.png)
 
 ## Tech Stack
 
