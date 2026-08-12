@@ -2,3 +2,4 @@
 
 - update: add retry
 - update: add skeleton to card
+- fix: typo

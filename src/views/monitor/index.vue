@@ -18,7 +18,7 @@ const stats = computed(() => monitorStore.stats)
 
 <template>
     <MonitorCardArea :stats="stats" />
-    <el-row :gutter="20" align="stretch">
+    <el-row :gutter="20">
         <MachineChart :stats="stats" :height="320"/>
         <Statistics :height="320" />
     </el-row>

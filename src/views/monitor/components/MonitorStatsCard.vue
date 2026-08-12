@@ -10,6 +10,8 @@ const props = defineProps<{
   columns?: 1 | 2 | 3 | 4
 
   height?: number
+
+  loading?: boolean
 }>()
 
 const lgSpan = computed(() => {

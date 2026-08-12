@@ -12,13 +12,13 @@ onMounted(async () => {
 const now = new Date()
 const currentHour = now.getHours()
 const stats = computed(() => productionStore.trend) 
-const validOuputs = computed(() => stats.value
+const validOutputs = computed(() => stats.value
     .filter(item => {
         const hour = Number(item.hour.split(':')[0])
         return hour <= currentHour
     })
 )
-const values = computed(() => validOuputs.value.map(item => item.total)) 
+const values = computed(() => validOutputs.value.map(item => item.total)) 
 
 
 // 平均
@@ -43,10 +43,16 @@ const standardDeviation = computed(() => {
 })
 
 // 最大值
-const maximum = computed(() => Math.max(...values.value))
+const maximum = computed(() => {
+    if (values.value.length <= 0) return 0
+    return Math.max(...values.value)
+})
 
 // 最小值
-const minimum = computed(() => Math.max(...values.value))
+const minimum = computed(() => {
+    if (values.value.length <= 0) return 0
+    return Math.min(...values.value)
+})
 
 </script>
 
