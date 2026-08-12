@@ -12,6 +12,7 @@ const props = defineProps<{
   height?: number
 
   loading?: boolean
+  skeleton?: number
 }>()
 
 const lgSpan = computed(() => {
@@ -48,18 +49,16 @@ const cardHeight = computed(() => {
 
             <el-skeleton 
                 v-if="loading"
-                :rows="1"
+                :rows="skeleton ?? 1"
                 animated
             />
 
-            <div v-else class="card-contenet">
-                <slot />
-                <div class="stat-card__value">
-                    {{ value }}
-                    <span v-if="unit">
-                        {{ unit }}
-                    </span>
-                </div>
+            <slot v-else-if="!value" />
+            <div class="stat-card__value">
+                {{ value }}
+                <span v-if="unit">
+                    {{ unit }}
+                </span>
             </div>
         </el-card>
     </el-col>

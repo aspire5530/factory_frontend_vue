@@ -61,6 +61,7 @@ const minimum = computed(() => {
         :title="'Statistics'"
         :columns="2"
         :loading="productionStore.loadingTrend"
+        :skeleton="4"
     >
         <el-statistic title="平均數" :value="mean" />
         <el-statistic title="標準差" :value="standardDeviation" />

@@ -6,6 +6,7 @@ import type { MonitorStats } from '@/types/device'
 
 const props = defineProps<{
     stats: MonitorStats
+    loading: boolean
 }>()
 
 const option = computed(() => ({
@@ -39,6 +40,7 @@ const option = computed(() => ({
     <MonitorStatsCard 
         :title="'Ratio'"
         :columns="2"
+        :loading="loading"
     >
         <v-chart
             :option="option"

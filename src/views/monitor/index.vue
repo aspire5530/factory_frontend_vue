@@ -13,13 +13,14 @@ onMounted(async () => {
 })
 
 const stats = computed(() => monitorStore.stats) 
+const loading = computed(() => monitorStore.loading)
 
 </script>
 
 <template>
-    <MonitorCardArea :stats="stats" />
+    <MonitorCardArea :stats="stats" :loading="loading"/>
     <el-row :gutter="20">
-        <MachineChart :stats="stats" :height="320"/>
+        <MachineChart :stats="stats" :height="320" :loading="loading"/>
         <Statistics :height="320" />
     </el-row>
     <MonitorChart />

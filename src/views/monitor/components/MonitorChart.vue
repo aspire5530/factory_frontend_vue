@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted } from 'vue'
+import { computed, onMounted, nextTick, watch } from 'vue'
 import VChart from  'vue-echarts'
 import MonitorStatsCard from './MonitorStatsCard.vue'
 import { useProductionStore } from '../../../stores/production'
@@ -38,13 +38,13 @@ const option = computed(() => ({
     <MonitorStatsCard 
         :title="'Output'"
         :columns="1"
-    >
+        >
         <div class="box">
             <v-chart 
                 class="chart"
                 :option="option"
+                :loading="productionStore.loadingTrend"
                 autoresize
-                height=""
             />
         </div>
     </MonitorStatsCard>
