@@ -54,6 +54,7 @@ const minimum = computed(() => Math.max(...values.value))
     <MonitorStatsCard
         :title="'Statistics'"
         :columns="2"
+        :loading="productionStore.loadingTrend"
     >
         <el-statistic title="平均數" :value="mean" />
         <el-statistic title="標準差" :value="standardDeviation" />

@@ -43,12 +43,21 @@ const cardHeight = computed(() => {
                 {{ title }}
                 </div>
             </template>
-            <slot />
-            <div class="stat-card__value">
-                {{ value }}
-                <span v-if="unit">
-                    {{ unit }}
-                </span>
+
+            <el-skeleton 
+                v-if="loading"
+                :rows="1"
+                animated
+            />
+
+            <div v-else class="card-contenet">
+                <slot />
+                <div class="stat-card__value">
+                    {{ value }}
+                    <span v-if="unit">
+                        {{ unit }}
+                    </span>
+                </div>
             </div>
         </el-card>
     </el-col>
